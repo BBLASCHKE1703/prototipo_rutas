@@ -1,0 +1,48 @@
+{
+  "info": {
+    "name": "Capstone Prototipo Rutas",
+    "_postman_id": "12345678-abcd-efgh-ijkl-987654321000",
+    "description": "Colección para probar API de ruteo con prioridad a clientes Black",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Seed (cargar datos de ejemplo)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": { "raw": "http://127.0.0.1:8000/seed", "protocol": "http", "host": ["127.0.0.1"], "port": "8000", "path": ["seed"] }
+      }
+    },
+    {
+      "name": "Listar pedidos (GET /orders)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/orders?date=2025-09-24",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["orders"],
+          "query": [{ "key": "date", "value": "2025-09-24" }]
+        }
+      }
+    },
+    {
+      "name": "Obtener ruta (GET /routes)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/routes?date=2025-09-24",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["routes"],
+          "query": [{ "key": "date", "value": "2025-09-24" }]
+        }
+      }
+    }
+  ]
+}
